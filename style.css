@@ -1,14 +1,15 @@
-html,
+:root {
+  --color-blue: #0050f5;
+}
+
 body {
-  width: 100%;
-  height: 100%;
   font-family: "Anonymous Pro", monospace;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
-}
-body {
   background: #f9f9f9;
+  margin: 0;
 }
+
 ::selection {
   background: #4a4a4a;
   color: #fff;
@@ -17,213 +18,44 @@ body {
   background: #4a4a4a;
   color: #fff;
 }
-div {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-div h1 {
-  font-size: 32px;
-  margin: 0;
-  color: #4a4a4a;
-  font-weight: 500;
-}
-div h2 {
-  font-size: 16px;
-  margin: 0;
-  color: #9b9b9b;
-  font-weight: 500;
-}
-ul.icons {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 10px 0 0 0;
-  padding: 0;
-}
-ul.icons li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul.icons li:not(:first-of-type) {
-  margin-left: 10px;
-}
-ul.icons li svg {
-  width: auto;
-  height: 16px;
-}
-ul.icons li svg * {
-  fill: #626262;
-  -webkit-transition: 0.2s all ease-in-out;
-  transition: 0.2s all ease-in-out;
-}
-ul.icons li a:hover svg * {
-  fill: #4a4a4a;
-}
-/**
-     * Tooltip Styles
-     */
 
-/* Base styles for the element that has a tooltip */
-[data-tooltip],
-.tooltip {
+h1 {
+  font-family: "Martel", serif;
+  color: var(--color-blue);
+  font-weight: 900;
+  text-transform: lowercase;
+  font-size: 3rem;
+  line-height: 1;
+  margin-top: 0;
+}
+
+#content {
+  margin: 0 auto;
   position: relative;
-  cursor: pointer;
-}
-
-/* Base styles for the entire tooltip */
-[data-tooltip]:before,
-[data-tooltip]:after,
-.tooltip:before,
-.tooltip:after {
-  position: absolute;
-  visibility: hidden;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
-    -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-  -moz-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
-    -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out,
-    transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  pointer-events: none;
-}
-
-/* Show the entire tooltip on hover and focus */
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after,
-[data-tooltip]:focus:before,
-[data-tooltip]:focus:after,
-.tooltip:hover:before,
-.tooltip:hover:after,
-.tooltip:focus:before,
-.tooltip:focus:after {
-  visibility: visible;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-/* Base styles for the tooltip's directional arrow */
-.tooltip:before,
-[data-tooltip]:before {
-  z-index: 1001;
-  border: 6px solid transparent;
-  background: transparent;
-  content: "";
-}
-
-/* Base styles for the tooltip's content area */
-.tooltip:after,
-[data-tooltip]:after {
-  z-index: 1000;
-  padding: 8px 0 8px 8px;
-  min-width: 58px;
-  text-align: center;
-  background-color: #000;
-  background-color: hsla(0, 0%, 20%, 0.1);
-  color: #4a4a4a;
-  content: attr(data-tooltip);
-  font-size: 14px;
+  padding: 2rem 1rem 2rem 1rem;
+  max-width: 48rem;
+  text-align: left;
+  font-size: 2rem;
   line-height: 1.2;
-  border-radius: 5px;
 }
 
-.icons > li > a:first-of-type:after {
-  padding: 8px;
+@media screen and (min-width: 48rem) {
+  h1 {
+    font-size: 7rem;
+    margin-top: 4rem;
+  }
+
+  #content {
+    line-height: 1.5;
+    font-size: 2.5rem;
+    padding-top: 5rem;
+  }
 }
 
-/* Directions */
-
-/* Top (default) */
-[data-tooltip]:before,
-[data-tooltip]:after,
-.tooltip:before,
-.tooltip:after,
-.tooltip-top:before,
-.tooltip-top:after {
-  bottom: 100%;
-  left: 50%;
-}
-
-[data-tooltip]:before,
-.tooltip:before,
-.tooltip-top:before {
-  margin-left: -6px;
-  margin-bottom: -12px;
-  border-top-color: #000;
-  border-top-color: hsla(0, 0%, 20%, 0.9);
-}
-
-/* Horizontally align top/bottom tooltips */
-[data-tooltip]:after,
-.tooltip:after,
-.tooltip-top:after {
-  margin-left: -38px;
-}
-
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after,
-[data-tooltip]:focus:before,
-[data-tooltip]:focus:after,
-.tooltip:hover:before,
-.tooltip:hover:after,
-.tooltip:focus:before,
-.tooltip:focus:after,
-.tooltip-top:hover:before,
-.tooltip-top:hover:after,
-.tooltip-top:focus:before,
-.tooltip-top:focus:after {
-  -webkit-transform: translateY(-12px);
-  -moz-transform: translateY(-12px);
-  transform: translateY(-12px);
-}
-
-/* Bottom */
-.tooltip-bottom:before,
-.tooltip-bottom:after {
-  top: 100%;
-  bottom: auto;
-  left: 50%;
-}
-
-.tooltip-bottom:before {
-  margin-top: -12px;
-  margin-bottom: 0;
-  border-top-color: transparent;
-  border-bottom-color: #000;
-  border-bottom-color: hsla(0, 0%, 20%, 0.1);
-}
-
-.tooltip-bottom:hover:before,
-.tooltip-bottom:hover:after,
-.tooltip-bottom:focus:before,
-.tooltip-bottom:focus:after {
-  -webkit-transform: translateY(12px);
-  -moz-transform: translateY(12px);
-  transform: translateY(12px);
+a,
+a:visited,
+a:active,
+a:hover {
+  color: var(--color-blue);
+  text-decoration: none;
 }
