@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+
+  _                      _
+ | |                    | |
+ | |__   ___ _   _   ___| |_ _ __ __ _ _ __   __ _  ___ _ __
+ | '_ \ / _ \ | | | / __| __| '__/ _` | '_ \ / _` |/ _ \ '__|
+ | | | |  __/ |_| | \__ \ |_| | | (_| | | | | (_| |  __/ |
+ |_| |_|\___|\__, | |___/\__|_|  \__,_|_| |_|\__, |\___|_|
+              __/ |                           __/ |
+             |___/                           |___/
+
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Brian John Hanna - Web Developer in Massachusetts</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Boston",
+          "addressRegion": "MA"
+        },
+        "birthDate" : "1988-07-28T00:00:00+00:00",
+        "email": "mailto:b@brianjohnhanna.com",
+        "image": "https://brianjohnhanna.com/brianjohnhanna.jpg",
+        "jobTitle": "Senior Web Developer",
+        "name": "Brian Hanna",
+        "url": "https://brianjohnhanna.com"
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Senior-level web developer residing in the greater Boston area specializing in PHP and Javascript." />
+    <style>
+    @font-face {
+      font-family: 'GTWalsheim';
+      src: url('gt-walsheim/gt-walsheim-web.eot'); /* IE9 Compat Modes */
+      src: url('gt-walsheim/gt-walsheim-web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+           url('gt-walsheim/gt-walsheim-web.woff') format('woff'), /* Pretty Modern Browsers */
+           url('gt-walsheim/gt-walsheim-web.ttf')  format('truetype'), /* Safari, Android, iOS */
+           url('gt-walsheim/gt-walsheim-web.svg#gt_walsheimregular') format('svg'); /* Legacy iOS */
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'GTWalsheim', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-weight: 500;
+    }
+    body {
+      background: #f9f9f9;
+    }
+    ::selection {
+      background: #4a4a4a;
+      color: #fff;
+    }
+    ::-moz-selection {
+      background: #4a4a4a;
+      color: #fff;
+    }
+    div {
+      width: 100%;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    div h1 {
+      font-size: 32px;
+      margin: 0;
+      color: #4A4A4A;
+      font-weight: 500;
+    }
+    div h2 {
+      font-size: 16px;
+      margin: 0;
+      color: #9B9B9B;
+      font-weight: 500;
+    }
+    ul.icons {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+    ul.icons li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    ul.icons li:not(:first-of-type) {
+      margin-left: 10px;
+    }
+    ul.icons li svg {
+      width: auto;
+      height: 16px;
+    }
+    ul.icons li svg * {
+      fill: #626262;
+      -webkit-transition: 0.2s all ease-in-out;
+      transition: 0.2s all ease-in-out;
+    }
+    ul.icons li a:hover svg * {
+      fill: #4A4A4A;
+    }
+    /**
+     * Tooltip Styles
+     */
+
+    /* Base styles for the element that has a tooltip */
+    [data-tooltip],
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+
+    /* Base styles for the entire tooltip */
+    [data-tooltip]:before,
+    [data-tooltip]:after,
+    .tooltip:before,
+    .tooltip:after {
+      position: absolute;
+      visibility: hidden;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+      opacity: 0;
+      -webkit-transition:
+          opacity 0.2s ease-in-out,
+            visibility 0.2s ease-in-out,
+            -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        -moz-transition:
+            opacity 0.2s ease-in-out,
+            visibility 0.2s ease-in-out,
+            -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+        transition:
+            opacity 0.2s ease-in-out,
+            visibility 0.2s ease-in-out,
+            transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform:    translate3d(0, 0, 0);
+      transform:         translate3d(0, 0, 0);
+      pointer-events: none;
+    }
+
+    /* Show the entire tooltip on hover and focus */
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after,
+    [data-tooltip]:focus:before,
+    [data-tooltip]:focus:after,
+    .tooltip:hover:before,
+    .tooltip:hover:after,
+    .tooltip:focus:before,
+    .tooltip:focus:after {
+      visibility: visible;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+      opacity: 1;
+    }
+
+    /* Base styles for the tooltip's directional arrow */
+    .tooltip:before,
+    [data-tooltip]:before {
+      z-index: 1001;
+      border: 6px solid transparent;
+      background: transparent;
+      content: "";
+    }
+
+    /* Base styles for the tooltip's content area */
+    .tooltip:after,
+    [data-tooltip]:after {
+      z-index: 1000;
+      padding: 8px 0 8px 8px;
+      min-width: 58px;
+      text-align: center;
+      background-color: #000;
+      background-color: hsla(0, 0%, 20%, 0.1);
+      color: #4A4A4A;
+      content: attr(data-tooltip);
+      font-size: 14px;
+      line-height: 1.2;
+      border-radius: 5px;
+    }
+
+    .icons > li > a:first-of-type:after {
+      padding: 8px;
+    }
+
+    /* Directions */
+
+    /* Top (default) */
+    [data-tooltip]:before,
+    [data-tooltip]:after,
+    .tooltip:before,
+    .tooltip:after,
+    .tooltip-top:before,
+    .tooltip-top:after {
+      bottom: 100%;
+      left: 50%;
+    }
+
+    [data-tooltip]:before,
+    .tooltip:before,
+    .tooltip-top:before {
+      margin-left: -6px;
+      margin-bottom: -12px;
+      border-top-color: #000;
+      border-top-color: hsla(0, 0%, 20%, 0.9);
+    }
+
+    /* Horizontally align top/bottom tooltips */
+    [data-tooltip]:after,
+    .tooltip:after,
+    .tooltip-top:after {
+      margin-left: -38px;
+    }
+
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after,
+    [data-tooltip]:focus:before,
+    [data-tooltip]:focus:after,
+    .tooltip:hover:before,
+    .tooltip:hover:after,
+    .tooltip:focus:before,
+    .tooltip:focus:after,
+    .tooltip-top:hover:before,
+    .tooltip-top:hover:after,
+    .tooltip-top:focus:before,
+    .tooltip-top:focus:after {
+      -webkit-transform: translateY(-12px);
+      -moz-transform:    translateY(-12px);
+      transform:         translateY(-12px);
+    }
+
+
+    /* Bottom */
+    .tooltip-bottom:before,
+    .tooltip-bottom:after {
+      top: 100%;
+      bottom: auto;
+      left: 50%;
+    }
+
+    .tooltip-bottom:before {
+      margin-top: -12px;
+      margin-bottom: 0;
+      border-top-color: transparent;
+      border-bottom-color: #000;
+      border-bottom-color: hsla(0, 0%, 20%, 0.1);
+    }
+
+    .tooltip-bottom:hover:before,
+    .tooltip-bottom:hover:after,
+    .tooltip-bottom:focus:before,
+    .tooltip-bottom:focus:after {
+      -webkit-transform: translateY(12px);
+      -moz-transform:    translateY(12px);
+      transform:         translateY(12px);
+    }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Brian John Hanna</h1>
+      <h2>Senior Web Developer</h2>
+      <ul class="icons">
+        <li>
+          <a href="https://github.com/brianjohnhanna" class="tooltip-bottom" data-tooltip="🤓 only">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 291.32 291.32" style="enable-background:new 0 0 291.32 291.32;" xml:space="preserve">
+              <g>
+              	<path d="M145.66,0C65.219,0,0,65.219,0,145.66c0,80.45,65.219,145.66,145.66,145.66
+              		s145.66-65.21,145.66-145.66C291.319,65.219,226.1,0,145.66,0z M186.462,256.625c-0.838-11.398-1.775-25.518-1.83-31.235
+              		c-0.364-4.388-0.838-15.549-11.434-22.677c42.068-3.523,62.087-26.774,63.526-57.499c1.202-17.497-5.754-32.883-18.107-45.3
+              		c0.628-13.282-0.401-29.023-1.256-35.941c-9.486-2.731-31.608,8.949-37.79,13.947c-13.037-5.062-44.945-6.837-64.336,0
+              		c-13.747-9.668-29.396-15.64-37.926-13.974c-7.875,17.452-2.813,33.948-1.275,35.914c-10.142,9.268-24.289,20.675-20.447,44.572
+              		c6.163,35.04,30.816,53.94,70.508,58.564c-8.466,1.73-9.896,8.048-10.606,10.788c-26.656,10.997-34.275-6.791-37.644-11.425
+              		c-11.188-13.847-21.23-9.832-21.849-9.614c-0.601,0.218-1.056,1.092-0.992,1.511c0.564,2.986,6.655,6.018,6.955,6.263
+              		c8.257,6.154,11.316,17.27,13.2,20.438c11.844,19.473,39.374,11.398,39.638,11.562c0.018,1.702-0.191,16.032-0.355,27.184
+              		C64.245,245.992,27.311,200.2,27.311,145.66c0-65.365,52.984-118.348,118.348-118.348S264.008,80.295,264.008,145.66
+              		C264.008,196.668,231.69,239.992,186.462,256.625z"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/brianjohnhanna/" class="tooltip-bottom" data-tooltip="Let's 🤝">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 485 485" style="enable-background:new 0 0 485 485;" xml:space="preserve">
+            <g>
+            	<rect x="89.016" y="189.906" width="67.506" height="203.096"/>
+            	<path d="M122.323,162.186h0.446c23.551,0,38.194-15.601,38.194-35.101c-0.442-19.928-14.643-35.087-37.752-35.087
+            		C100.107,91.998,85,107.157,85,127.085C85,146.585,99.678,162.186,122.323,162.186z"/>
+            	<path d="M261.4,393.002V279.576c0-6.086,0.464-12.119,2.24-16.459c4.887-12.149,15.978-24.693,34.641-24.693
+            		c24.439,0,34.195,18.629,34.195,45.92v108.657H400V276.535c0-62.379-33.307-91.398-77.744-91.398
+            		c-35.871,0-51.883,19.74-60.856,33.547v0.665h-0.442c0.118-0.219,0.306-0.442,0.442-0.665v-28.779h-67.537
+            		c0.905,19.053,0,203.096,0,203.096H261.4z"/>
+            	<path d="M0,0v485h485V0H0z M455,455H30V30h425V455z"/>
+            </g>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:b@brianjohnhanna.com" class="tooltip-bottom" data-tooltip="Say 👋">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 515.418 515.418" style="enable-background:new 0 0 515.418 515.418;" xml:space="preserve">
+            <g>
+            	<g>
+            		<path d="M505.654,22.313c-5.614-2.807-12.327-0.732-17.087,3.051c-0.122,0.122-0.366,0.122-0.488,0.244L8.056,275.202
+            			C3.295,276.788,0,283.257,0,289.603c0,6.346,3.173,12.815,9.642,14.402l138.893,51.505l41.009,120.341
+            			c-0.855,5.981,1.586,11.961,7.323,15.378c0.732,0.366,1.465,0.732,2.319,1.099c2.197,1.342,4.76,2.075,7.323,2.075
+            			c3.417,0,6.834-0.855,9.642-3.661c2.929-2.441,5.37-5.981,7.201-10.375l57.974-85.557l136.452,56.265
+            			c4.76,3.173,9.642,1.586,14.402,0c4.76-1.586,6.346-6.346,8.056-11.229l75.183-400.081
+            			C515.296,31.833,512.122,25.486,505.654,22.313z M56.143,286.308l337.591-175.997L156.956,323.167L56.143,286.308z
+            			 M219.203,347.089c-1.587,1.586-3.173,3.173-3.173,4.76c-1.586,1.586-1.586,1.586-1.586,3.173l-11.229,59.194l-24.41-70.424
+            			l171.114-153.294L219.203,347.089z M239.462,398.716l3.783-19.649l7.445,3.051L239.462,398.716z M408.136,417.512L282.302,365.03
+            			c-0.122-0.122-0.366-0.244-0.488-0.366c-1.953-1.099-3.906-1.952-5.98-2.319l-21.236-8.91L469.039,95.788L408.136,417.512z"/>
+            	</g>
+            </g>
+            </svg>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#" title="Download CV">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 479 479" style="enable-background:new 0 0 479 479;" xml:space="preserve">
+            <g>
+            	<g>
+            		<path d="M158.4,196.8c-5.3,5.3-5.3,13.8,0,19.1l71.6,71.6c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l71.6-71.6c5.3-5.3,5.3-13.8,0-19.1
+            			s-13.8-5.3-19.1,0L253,245.3V13.5C253,6,247,0,239.5,0S226,6,226,13.5v231.8l-48.5-48.5C172.2,191.5,163.6,191.5,158.4,196.8z"/>
+            		<path d="M460.2,307.4l-47-170c-1.1-3.9-3.8-7-7.4-8.7l-1.3-0.6c-1.8-0.8-3.7-1.2-5.6-1.2h-84.7c-7.5,0-13.5,6-13.5,13.5
+            			s6,13.5,13.5,13.5h75.6l39.7,143.8h-105c-7.5,0-13.5,6-13.5,13.5v12.2c0,17.9-14.5,32.4-32.4,32.4h-82.4
+            			c-17.9,0-32.4-14.5-32.4-32.4v-12.2c0-7.5-6-13.5-13.5-13.5H49.4l39.9-144.1h75.6c7.5,0,13.5-6,13.5-13.5s-6-13.5-13.5-13.5H80.1
+            			c-1.9,0-3.8,0.4-5.6,1.2l-1.3,0.6c-3.6,1.7-6.4,4.8-7.4,8.7l-47,170c-0.3,1.2-0.5,2.4-0.5,3.6v70.9c0,53.7,43.7,97.4,97.4,97.4
+            			h247.6c53.7,0,97.4-43.7,97.4-97.4V311C460.7,309.7,460.6,308.5,460.2,307.4z M433.7,381.6c0,38.8-31.6,70.4-70.4,70.4H115.7
+            			c-38.8,0-70.4-31.6-70.4-70.4v-56.9H137c0.7,32.1,27.1,58,59.4,58h82.4c32.3,0,58.7-25.9,59.4-58h95.7v56.9H433.7z"/>
+            	</g>
+            </g>
+            </svg>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </body>
+</html>
